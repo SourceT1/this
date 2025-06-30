@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: tepthon-bot
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python3 modified.py"
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: STRING_SESSION
+        sync: false
